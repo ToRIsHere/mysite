@@ -1,0 +1,65 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {
+    margin: 0px;
+}
+.main_header {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    color: #777777;
+    background: #FFFFFF;
+    z-index: 100000; /* <-- a bit dirty, no?*/
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    opacity: 50%;
+}
+.main_header ul {
+    padding: 20px 0px;
+    border: 0px;
+    margin: 0px;
+    display: inline-block;
+}
+.main_header ul.right{
+    padding-right: 100px;
+    float: right;  
+}
+.main_header ul.left{
+    padding-left: 50px;
+    float: left;
+}
+.main_header li{
+    display: inline-block;
+    list-style-type: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.main_header li a{
+    text-decoration: none;
+    font-size: 28px;
+    color: #777777;
+}
+
+.content {
+    padding: 10rem;   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
