@@ -3,6 +3,30 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+@font-face {
+	font-family: 'RosarioRegular';
+	src: local('Rosario Regular'), local('Rosario'), url('fonts/Rosario-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'RosarioBold';
+	src: local('Rosario Regular'), local('Rosario'), url('fonts/Rosario-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'RosarioItalic';
+	src: local('Rosario Regular'), local('Rosario'), url('fonts/Rosario-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+html{
+    font-family: 'RosarioRegular', Fallback, sans-serif;
+}
 body {
     margin: 0px;
 }
@@ -41,12 +65,12 @@ body {
 
 .main_header li a{
     text-decoration: none;
-    font-size: 28px;
+    font-size: 16px;
     color: #777777;
 }
 
 .content {
-    padding: 10rem;   
+    padding: 5rem;
 }
 
 
