@@ -1,52 +1,33 @@
-
-
+@import url(http://fonts.googleapis.com/css?family=Raleway);
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-@font-face {
-	font-family: 'RosarioRegular';
-	src: local('Rosario Regular'), local('Rosario'), url('fonts/Rosario-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-	font-family: 'RosarioBold';
-	src: local('Rosario Regular'), local('Rosario'), url('fonts/Rosario-Regular.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-	font-family: 'RosarioItalic';
-	src: local('Rosario Regular'), local('Rosario'), url('fonts/Rosario-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-}
-
-html{
-    font-family: 'RosarioRegular', Fallback, sans-serif;
-}
 body {
     margin: 0px;
+    font-family: 'Raleway', sans-serif;
+    background-color: #FFFFFF;
 }
+
+.group:after {
+  content: "";
+  clear: both;
+}
+
 .main_header {
     position: fixed;
     width: 100%;
     height: 70px;
     color: #777777;
     background: #FFFFFF;
-    z-index: 100000; /* <-- a bit dirty, no?*/
+    z-index: 100; /* <-- a bit dirty, no?*/
     padding: 0px;
-    border: 0px;
     margin: 0px;
-    opacity: 50%;
+    border: 10em;
 }
 .main_header ul {
-    padding: 20px 0px;
-    border: 0px;
+    padding-top: 24px;
     margin: 0px;
-    display: inline-block;
+    display: block;
 }
 .main_header ul.right{
     padding-right: 100px;
@@ -56,6 +37,7 @@ body {
     padding-left: 50px;
     float: left;
 }
+
 .main_header li{
     display: inline-block;
     list-style-type: none;
@@ -65,34 +47,156 @@ body {
 
 .main_header li a{
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1em;
     color: #777777;
 }
 
+.container {
+    width: auto;
+    max-width: 960px;
+    margin: 50px auto;
+}
+
 .circular {
+    float: right;
+    display: inline;
 	width: 100px;
 	height: 100px;
 	border-radius: 50px;
 	-webkit-border-radius: 50px;
 	-moz-border-radius: 50px;
+
+    z-index: 500000;
 	background: url('../img/me.jpg') no-repeat;
+
+    -webkit-animation: fade-in 5s;
+    -moz-animation: fade-in 5s;
+}
+
+.center {
+    margin: auto;
+    width: 80%;
 }
 
 .content {
-    padding: 5rem;
+    display: block;
+    position: relative;
+    padding-top: 5em;
+    width: auto;
+    text-align: center;
 }
 
+.content .banner{
+    height: auto;
+    font-size: 4em;
+    font-weight: 100;
+    color: #777777;
+    line-height: 130%;
+    display: inline-block;
+    padding-top: 2em;
+}
 
+@-webkit-keyframes typing {
+    from { width: 0% }
+    to { width: 100% }
+}
 
+@-moz-keyframes typing {
+    from { width: 0% }
+    to { width:100% }
+}
+@-webkit-keyframes typing2 {
+    0%{width: 0%;}
+    50%{width: 0%;}
+    100%{ width: 100%; }
+}
 
+@-moz-keyframes typing2 {
+    0%{width: 0%;}
+    50%{width: 0%;}
+    100%{ width: 100%; }
+}
 
+@-webkit-keyframes fade-in {
+    0%{opacity: 0;}
+    50%{opacity: 0.5;}
+    100%{ opacity: 1; }
+}
 
+@-moz-keyframes fade-in {
+    0%{opacity: 0;}
+    50%{opacity: 0.5;}
+    100%{ opacity: 1; }
+}
 
+@-webkit-keyframes fade-in2 {
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    75%{opacity: 0.5;}
+    100%{ opacity: 1; }
+}
 
+@-moz-keyframes fade-in2 {
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    75%{opacity: 0.5;}
+    100%{ opacity: 1; }
+}
 
+.banner .css_typing {
+    width:auto;
+    white-space:nowrap;
+    overflow:hidden;
 
+    -webkit-animation: typing 2s steps(50, end); /* # of steps = # of characters */
 
+    -moz-animation: typing 2s steps(50, end); /* # of steps = # of characters */
+}
 
+.banner .css_typing2 {
+    width:auto;
+    white-space:nowrap;
+    overflow:hidden;
 
+    -webkit-animation: typing2 4s steps(50, end); /* # of steps = # of characters */
+    -moz-animation: typing2 4s steps(50, end); /* # of steps = # of characters */
+}
 
+.banner .css-fade-in {
+    -webkit-animation: fade-in 2s;
+    -moz-animation: fade-in 2s;
+}
 
+.banner .css-fade-in2 {
+    -webkit-animation: fade-in2 4s;
+    -moz-animation: fade-in2 4s;
+}
+
+.hex {
+    float: left;
+    margin-left: 4px;
+    margin-bottom: -39px;
+}
+.hex .top {
+    width: 0;
+    border-bottom: 45px solid #31b0d5;
+    border-left: 78px solid transparent;
+    border-right: 78px solid transparent;
+}
+.hex .middle {
+    width: 156px;
+    height: 90px;
+    background: #31b0d5;
+}
+.hex .bottom {
+    width: 0;
+    border-top: 45px solid #31b0d5;
+    border-left: 78px solid transparent;
+    border-right: 78px solid transparent;
+}
+.hex-row {
+    clear: left;
+}
+.hex-row.even {
+    margin-left: 79px;
+}
