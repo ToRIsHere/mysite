@@ -1,10 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 body {
     margin: 0px;
     font-family: 'Raleway', sans-serif;
+    font-weight: 400;
     background-color: #FFFFFF;
 }
 
@@ -51,12 +52,6 @@ body {
     color: #777777;
 }
 
-.container {
-    width: auto;
-    max-width: 960px;
-    margin: 50px auto;
-}
-
 .circular {
     float: right;
     display: inline;
@@ -89,7 +84,7 @@ body {
 .content .banner{
     height: auto;
     font-size: 4em;
-    font-weight: 100;
+    font-weight: 200;
     color: #777777;
     line-height: 130%;
     display: inline-block;
@@ -172,108 +167,83 @@ body {
     -moz-animation: fade-in2 4s;
 }
 
-.hex {
-    float: left;
-    margin-left: 4px;
-    margin-bottom: -39px;
-}
-.hex .top {
-    width: 0;
-    border-bottom: 45px solid #31b0d5;
-    border-left: 78px solid transparent;
-    border-right: 78px solid transparent;
-}
-.hex .middle {
-    width: 156px;
-    height: 90px;
-    background: #31b0d5;
-}
-.hex .bottom {
-    width: 0;
-    border-top: 45px solid #31b0d5;
-    border-left: 78px solid transparent;
-    border-right: 78px solid transparent;
-}
-.hex-row {
-    clear: left;
-}
-.hex-row.even {
-    margin-left: 79px;
-}
-
-
-.hexagon {
-    overflow: hidden;
-    visibility: hidden;
-    -webkit-transform: rotate(120deg);
-       -moz-transform: rotate(120deg);
-        -ms-transform: rotate(120deg);
-         -o-transform: rotate(120deg);
-            transform: rotate(120deg);
-    cursor: pointer;
-    }
-.hexagon-in1 {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: rotate(-60deg);
-       -moz-transform: rotate(-60deg);
-        -ms-transform: rotate(-60deg);
-         -o-transform: rotate(-60deg);
-            transform: rotate(-60deg);
-    }
-.hexagon-in2 {
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-image: url(http://placekitten.com/240/240);
-    visibility: visible;
-    -webkit-transform: rotate(-60deg);
-       -moz-transform: rotate(-60deg);
-        -ms-transform: rotate(-60deg);
-         -o-transform: rotate(-60deg);
-            transform: rotate(-60deg);
-    }
-.hexagon-in2:hover {
-    background-image: url(http://placekitten.com/241/241);
-    }
-
-.hexagon1 {
-    width: 400px;
-    height: 200px;
-    margin: 0 0 0 -80px;
-    }
-.hexagon2 {
-    width: 156px;
-    height: 90px;
-    margin: -80px 0 0 20px;
-}
-
-
 .center {
     width: 200px margin : auto margin-top : - 50 px
 }
 
-.hexagon {
-    width: 200px height : 400 px overflow : hidden visibility : hidden transform : rotate(120 deg) cursor : pointer
+.container {
+    width: auto;
+    height: auto;
+    max-width: 960px;
+    margin: 50px auto;
+    padding-bottom: 50px;
 }
-.hexagon-in1{
-  overflow: hidden
-  width: 100%
-  height: 100%
-  transform: rotate(-60deg)
 
+p.hex-inner {
+    text-align: center;
+    color: white;
+    font-weight: 200;
+    font-size: 2em;
 }
-.hexagon-in2{
-  width: 100%
-  height: 100%
-  visibility: visible
-  transform: rotate(-60deg)
-  background: url('http://lorempixel.com/g/250/350/people')
-    repeat: no-repeat
-    position: 50%
+
+.hexagon {
+  position: relative;
+  width: 190px;
+  height: 100px;
+  background-color: #64C7CC;
+  margin: 35.90px 0;
+  float:left;
+  margin-left: 20px;
+  display:inline;
 }
-.hexagon-in2:hover{
-  background: url('http://lorempixel.com/250/350/people')
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 95px solid transparent;
+  border-right: 95px solid transparent;
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 54.90px solid #64C7CC;
+}
+
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 54.90px solid #64C7CC;
+}
+
+.hexagon-even {
+    position: relative;
+    width: 190px;
+    height: 100px;
+    background-color: #64C7CC;
+    margin: 35.90px 0;
+    float:left;
+    margin-left: 123px;
+    display:inline;
+}
+
+.hexagon-even:before,
+.hexagon-even:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 95px solid transparent;
+  border-right: 95px solid transparent;
+}
+
+.hexagon-even:before {
+  bottom: 100%;
+  border-bottom: 54.90px solid #64C7CC;
+}
+
+.hexagon-even:after {
+  top: 100%;
+  width: 0;
+  border-top: 54.90px solid #64C7CC;
 }
