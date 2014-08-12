@@ -221,7 +221,7 @@ p.hex-inner {
     position: relative;
     width: 190px;
     height: 100px;
-    background-color: #64C7CC;
+    background-color: #CE341C;
     margin: 35.90px 0;
     float:left;
     margin-left: 123px;
@@ -239,11 +239,11 @@ p.hex-inner {
 
 .hexagon-even:before {
   bottom: 100%;
-  border-bottom: 54.90px solid #64C7CC;
+  border-bottom: 54.90px solid #CE341C;
 }
 
 .hexagon-even:after {
   top: 100%;
   width: 0;
-  border-top: 54.90px solid #64C7CC;
+  border-top: 54.90px solid #CE341C;
 }
