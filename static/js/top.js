@@ -36,3 +36,10 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
+
+$(document).ready(function() {
+  console.log("print");
+  $('#splash_animate').removeClass().addClass('splash animated bounceInRight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $(this).removeClass().addClass('splash');
+    });
+});
