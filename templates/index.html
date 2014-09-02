@@ -12,9 +12,21 @@
       <script src="../static/js/top.js"></script>
   </head>
   <body>
+    <div class="slide-menu">
+
+      <div class="slide-menu-content">
+        <div class="circular-img"></div>
+        <h4>Kittikorn Ariyasuk</h4>
+        <p>Thank you for visiting. You can view/download my resume here. Or contact me :)</p>
+        <a class="pure-button button-small" href="{{ url_for('resume') }}">See My Resume</a>
+        <a href="#"><p>Contact me</p></a>
+      </div>
+    </div>
+
     <div class="header">
         <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
-            <a class="pure-menu-heading" href="">HE<span style="color:#ff843b;">LL</span>O</a>
+            <i class="box-shadow-menu"></i>
+            <span class="pure-menu-heading">HE<span style="color:#ff843b;">LL</span>O</span>
             <ul>
                 <li class="pure-menu-selected"><a href="#">Home</a></li>
                 <li><a href="#">Blog</a></li>
@@ -22,6 +34,7 @@
             </ul>
         </div>
     </div>
+
     <div class="splash-container">
         <!--<div class="splash-background">
         </div>-->

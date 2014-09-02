@@ -75,7 +75,7 @@ label {
  * I want my pure-button elements to look a little different
  */
 .pure-button {
-    background-color: #1f8dd6;
+    background-color: black;
     color: white;
     padding: 0.5em 2em;
     border-radius: 5px;
@@ -154,8 +154,7 @@ a.pure-button-primary {
   height: 100%;
   background-repeat: no-repeat;
   top: 0;
-  left: 0;
-  position: fixed !important;
+  position: fixed;
   z-index: -2;
 
 }
