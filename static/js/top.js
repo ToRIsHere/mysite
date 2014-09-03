@@ -47,12 +47,12 @@ function isScrolledIntoView(elem)
 $(window).scroll(function(event){
     didScroll = true;
     if(isScrolledIntoView('#animate-name')){
-      $('#animate-name').removeClass().addClass('animated bounceInRight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $('#animate-name').removeClass().addClass('float-center card-container animated bounceInRight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 
       });
     }
     else{
-      $('#animate-name').removeClass();
+      $('#animate-name').removeClass().addClass('float-center card-container');
     }
 
 });

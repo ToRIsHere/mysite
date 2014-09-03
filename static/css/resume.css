@@ -1,3 +1,145 @@
 #animate-name {
-  font-size: 300%;
+
+}
+
+.center-text {
+  text-align: center;
+  font-weight: 100;
+}
+
+.card-container {
+  font-weight: 100;
+  max-width: 640px;
+  width: 100%;
+  display: block;
+  padding: 0px;
+  margin: 15px;
+}
+
+.card {
+  background: #FFF;
+  border: 1px solid #AAA;
+  border-bottom: 3px solid #BBB;
+  overflow:hidden;
+}
+
+.card-noborder {
+  overflow:hidden;
+}
+
+.card h1{
+  margin: 0px;
+  padding: 10px;
+  padding-bottom: 20px;
+  font-size: 150%;
+  border-bottom: 1px solid #BBB;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card p {
+  margin: 0px;
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 150%;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.card-image {
+  width:100%;
+  height:200px;
+  padding:0px;
+  margin:0px;
+  background-position:center;
+  background-repeat:no-repeat;
+  position:relative;
+  overflow:hidden;
+}
+
+.image1 {
+  background-image:url('../img/back_gundam.jpg');
+}
+
+.card-image h1,
+.card-image h2,
+.card-image h3,
+.card-image h4,
+.card-image h5,
+.card-image h6 {
+    position:absolute;
+    bottom:0px;
+    width:100%;
+    color:white;
+    background:rgba(0,0,0,0.65);
+    margin:0px;
+    padding:6px;
+    border:none;
+}
+
+.float-left {
+    float:left;
+  /*  width:150px;
+    height:270px;*/
+}
+
+.float-right {
+    float:right;
+    /*width:150px;
+    height:270px;*/
+}
+.float-center {
+    float:center;
+}
+
+.rightColumn,
+.leftColumn {
+    display:inline-block;
+    width:49%;
+    vertical-align:top;
+}
+
+.flex-container {
+  margin: 10px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+.resume-circular-img {
+  width: 150px;
+  height: 150px;
+  /*position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  display: block;*/
+  border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
+  z-index: 5000;
+}
+
+blockquote {
+
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
 }
