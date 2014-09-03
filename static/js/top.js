@@ -3,7 +3,8 @@ var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $('header').outerHeight();
-var is_menu_showed = false
+var is_menu_showed = false;
+var is_scroll_down = false;
 var slide_menu = function(){
     $('.box-shadow-menu').click(function(){
         var slide_menu_left;
@@ -28,7 +29,7 @@ var slide_menu = function(){
         $('.splash-container').animate({
             left: content_left
         }, animate_menu);
-        $('#body').animate({
+        $('.resume-content').animate({
             left: content_left
         }, animate_menu);
     });
@@ -46,6 +47,9 @@ function isScrolledIntoView(elem)
 
 $(window).scroll(function(event){
     didScroll = true;
+    if (!is_scroll_down) {
+      return ;
+    }
     if(isScrolledIntoView('#animate-name')){
       $('#animate-name').removeClass().addClass('float-center card-container animated bounceInRight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 
@@ -53,6 +57,22 @@ $(window).scroll(function(event){
     }
     else{
       $('#animate-name').removeClass().addClass('float-center card-container');
+    }
+    if(isScrolledIntoView('#left-card-1')){
+      $('#left-card-1').removeClass().addClass('float-right card-container-2 animated bounceInLeft').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+
+      });
+    }
+    else{
+      $('#left-card-1').removeClass().addClass('float-right card-container-2');
+    }
+    if(isScrolledIntoView('#right-card-1')){
+      $('#right-card-1').removeClass().addClass('float-left card-container-2 animated bounceInRight').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+
+      });
+    }
+    else{
+      $('#right-card-1').removeClass().addClass('float-left card-container-2');
     }
 
 });
@@ -78,11 +98,13 @@ function hasScrolled() {
     if (st > lastScrollTop && st > navbarHeight && !is_menu_showed){
         // Scroll Down
         //$('header').removeClass('nav-down').addClass('nav-up');
+        is_scroll_down = true;
         $('.header').hide();
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
             //$('header').removeClass('nav-up').addClass('nav-down');
+            is_scroll_down = false;
             $('.header').show();
         }
     }
