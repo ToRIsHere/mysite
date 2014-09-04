@@ -75,3 +75,12 @@
   text-align: center;
   position:relative;
 }
+
+.arrow {
+  position: fixed;
+  font-size: 3em !important;
+  bottom: 40px;
+  left: 50%;
+  margin-left:-20px;
+  z-index: 100;
+}

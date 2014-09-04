@@ -6,6 +6,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="../static/css/top.css">
       <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+      <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="../static/css/marketing.css">
       <link rel="stylesheet" href="../static/css/animate.css">
       <script src="../static/js/vendor/jquery/jquery.js"></script>
@@ -13,7 +15,6 @@
   </head>
   <body>
     <div class="slide-menu">
-
       <div class="slide-menu-content">
         <div class="circular-img" style="background: url('../static/img/me.jpg') no-repeat;"></div>
         <h4>Kittikorn Ariyasuk</h4>
@@ -24,7 +25,7 @@
     </div>
 
     <div class="header">
-        <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+        <div id="transparent" class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
             <i class="box-shadow-menu"></i>
             <span class="pure-menu-heading">HE<span style="color:#ff843b;">LL</span>O</span>
             <ul>
@@ -36,30 +37,22 @@
     </div>
 
     <div class="splash-container">
-        <!--<div class="splash-background">
+        <!--<div class="splash-background blur-filter">
         </div>-->
-        <div id="splash_animate" class="splash">
-            <h1 class="splash-head">Big Bold Text</h1>
-            <div class="splash-subhead">
-                Lorem ipsum dolor sit amet.
+        <div class="splash">
+            <h1 id="splash_animate" class="splash-head hidden">Less is <span style="color:#ff843b;">More</span></h1>
+            <br>
+            <div id="splash_animate2" class="splash-subhead hidden">
+              <blockquote><p>Life is really simple, but we insist on making it complicated.</p></blockquote> - Confucius
             </div>
-            <div class="splash-subhead">
-                Lorem ipsum dolor sit amet.
-            </div>
-            <p>
-                <a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>
-            </p>
         </div>
     </div>
-
-
+    <i class="fa fa-arrow-down arrow animated infinite pulse"></i>
     <div class="content-wrapper">
         <div class="content">
-            <h2 class="content-head is-center">Excepteur sint occaecat cupidatat.</h2>
-
+            <h2 class="content-head is-center">Something that might interest you.</h2>
             <div class="pure-g">
                 <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-
                     <h3 class="content-subhead">
                         <i class="fa fa-rocket"></i>
                         Get Started Quickly
@@ -162,7 +155,6 @@
         </div>
 
     </div>
-
 
   </body>
 </html>
