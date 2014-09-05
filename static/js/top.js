@@ -6,33 +6,43 @@ var delta = 5;
 var navbarHeight = $('header').outerHeight();
 var is_menu_showed = false;
 var is_scroll_down = false;
-var slide_menu = function(){
+
+function slide_menu() {
+  var slide_menu_left;
+  var content_left;
+  var animate_menu = 200;
+  if (is_menu_showed){
+    slide_menu_left = '-285px';
+    content_left = '0px';
+    is_menu_showed = !is_menu_showed;
+  }
+  else{
+    slide_menu_left = '0px';
+    content_left = '285px';
+    is_menu_showed = !is_menu_showed;
+  }
+  $('.slide-menu').animate({
+      left: slide_menu_left
+  }, animate_menu);
+  $('.home-menu').animate({
+      left: content_left
+  }, animate_menu);
+  $('.content-wrapper').animate({
+      left: content_left
+  }, animate_menu);
+  $('.splash-container').animate({
+      left: content_left
+  }, animate_menu);
+  $('.resume-content').animate({
+      left: content_left
+  }, animate_menu);
+}
+function slide_menu_click(){
     $('.box-shadow-menu').click(function(){
-        var slide_menu_left;
-        var content_left;
-        var animate_menu = 200;
-        if (is_menu_showed){
-          slide_menu_left = '-285px';
-          content_left = '0px';
-          is_menu_showed = !is_menu_showed;
-        }
-        else{
-          slide_menu_left = '0px';
-          content_left = '285px';
-          is_menu_showed = !is_menu_showed;
-        }
-        $('.slide-menu').animate({
-            left: slide_menu_left
-        }, animate_menu);
-        $('.content-wrapper').animate({
-            left: content_left
-        }, animate_menu);
-        $('.splash-container').animate({
-            left: content_left
-        }, animate_menu);
-        $('.resume-content').animate({
-            left: content_left
-        }, animate_menu);
+        slide_menu();
+    });
+    $('.pure-menu-heading').click(function(){
+        slide_menu();
     });
 }
 
@@ -124,7 +134,7 @@ function hasScrolled() {
 }
 
 $(document).ready(function() {
-  slide_menu();
+  slide_menu_click();
   $('#splash_animate').removeClass().addClass('splash-head animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       $(this).removeClass().addClass('splash-head');
       $('#splash_animate2').removeClass().addClass('splash-subhead animated fadeInDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
