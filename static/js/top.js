@@ -135,10 +135,125 @@ function hasScrolled() {
 
 $(document).ready(function() {
   slide_menu_click();
+  $('#Untitleddrawing-3').lazylinepainter( 
+  {
+    "svgData": pathObj,
+    "strokeWidth": 2,
+    "strokeColor": "#e09b99"
+  }).lazylinepainter('paint');
   $('#splash_animate').removeClass().addClass('splash-head animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       $(this).removeClass().addClass('splash-head');
       $('#splash_animate2').removeClass().addClass('splash-subhead animated fadeInDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
           $(this).removeClass().addClass('splash-subhead');
+          $('.fa.fa-arrow-down.arrow').removeClass().addClass('fa fa-arrow-down arrow animated infinite pulse');
         });
     });
 });
+
+/* 
+ * Lazy Line Painter - Path Object 
+ * Generated using 'SVG to Lazy Line Converter'
+ * 
+ * http://lazylinepainter.info 
+ * Copyright 2013, Cam O'Connell  
+ *  
+ */ 
+ 
+var pathObj = {
+    "Untitleddrawing-3": {
+        "strokepath": [
+            {
+                "path": "m0 0l609.0 0l0 361.0l-609.0 0l0 -361.0z",
+                "duration": 600
+            },
+            {
+                "path": "m0 0l609.8819 0l0 361.41208l-609.8819 0z",
+                "duration": 600
+            },
+            {
+                "path": "m25.412073 27.293962l556.2205 0l0 313.4173l-556.2205 0z",
+                "duration": 600
+            },
+            {
+                "path": "m25.412073 27.293962l556.2205 0l0 313.4173l-556.2205 0z",
+                "duration": 600
+            },
+            {
+                "path": "m25.412073 56.939632l557.6378 0",
+                "duration": 600
+            },
+            {
+                "path": "m25.412073 56.939632l557.6378 0",
+                "duration": 600
+            },
+            {
+                "path": "m36.706036 43.52231l0 0c0 -3.5050507 3.4759636 -6.3464546 7.7637825 -6.3464546l0 0c4.287815 0 7.7637787 2.841404 7.7637787 6.3464546l0 0c0 3.5050545 -3.4759636 6.3464584 -7.7637787 6.3464584l0 0c-4.287819 0 -7.7637825 -2.841404 -7.7637825 -6.3464584z",
+                "duration": 600
+            },
+            {
+                "path": "m36.706036 43.52231l0 0c0 -3.5050507 3.4759636 -6.3464546 7.7637825 -6.3464546l0 0c4.287815 0 7.7637787 2.841404 7.7637787 6.3464546l0 0c0 3.5050545 -3.4759636 6.3464584 -7.7637787 6.3464584l0 0c-4.287819 0 -7.7637825 -2.841404 -7.7637825 -6.3464584z",
+                "duration": 600
+            },
+            {
+                "path": "m60.706036 43.52231l0 0c0 -3.5050507 3.4759636 -6.3464546 7.7637825 -6.3464546l0 0c4.287819 0 7.7637787 2.841404 7.7637787 6.3464546l0 0c0 3.5050545 -3.4759598 6.3464584 -7.7637787 6.3464584l0 0c-4.287819 0 -7.7637825 -2.841404 -7.7637825 -6.3464584z",
+                "duration": 600
+            },
+            {
+                "path": "m60.706036 43.52231l0 0c0 -3.5050507 3.4759636 -6.3464546 7.7637825 -6.3464546l0 0c4.287819 0 7.7637787 2.841404 7.7637787 6.3464546l0 0c0 3.5050545 -3.4759598 6.3464584 -7.7637787 6.3464584l0 0c-4.287819 0 -7.7637825 -2.841404 -7.7637825 -6.3464584z",
+                "duration": 600
+            },
+            {
+                "path": "m84.70604 43.52231l0 0c0 -3.5050507 3.4759598 -6.3464546 7.7637787 -6.3464546l0 0c4.287819 0 7.7637787 2.841404 7.7637787 6.3464546l0 0c0 3.5050545 -3.4759598 6.3464584 -7.7637787 6.3464584l0 0c-4.287819 0 -7.7637787 -2.841404 -7.7637787 -6.3464584z",
+                "duration": 600
+            },
+            {
+                "path": "m84.70604 43.52231l0 0c0 -3.5050507 3.4759598 -6.3464546 7.7637787 -6.3464546l0 0c4.287819 0 7.7637787 2.841404 7.7637787 6.3464546l0 0c0 3.5050545 -3.4759598 6.3464584 -7.7637787 6.3464584l0 0c-4.287819 0 -7.7637787 -2.841404 -7.7637787 -6.3464584z",
+                "duration": 600
+            },
+            {
+                "path": "m71.53018 99.29396l312.0 -1.8897629",
+                "duration": 600
+            },
+            {
+                "path": "m71.53018 99.29396l312.0 -1.8897629",
+                "duration": 600
+            },
+            {
+                "path": "m71.53018 139.29396l235.77954 -1.4173126",
+                "duration": 600
+            },
+            {
+                "path": "m71.53018 139.29396l235.77954 -1.4173126",
+                "duration": 600
+            },
+            {
+                "path": "m71.53018 179.29396l333.16534 -1.4173126",
+                "duration": 600
+            },
+            {
+                "path": "m71.53018 179.29396l333.16534 -1.4173126",
+                "duration": 600
+            },
+            {
+                "path": "m71.53018 219.29396l384.0 -0.47244263",
+                "duration": 600
+            },
+            {
+                "path": "m71.53018 219.29396l384.0 -0.47244263",
+                "duration": 600
+            },
+            {
+                "path": "m71.53018 259.29398l382.58267 0.47244263",
+                "duration": 600
+            },
+            {
+                "path": "m71.53018 259.29398l382.58267 0.47244263",
+                "duration": 600
+            }
+        ],
+        "dimensions": {
+            "width": 609,
+            "height": 361
+        }
+    }
+}; 
