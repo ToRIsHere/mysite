@@ -135,19 +135,26 @@ function hasScrolled() {
 
 $(document).ready(function() {
   slide_menu_click();
-  $('#Untitleddrawing-3').lazylinepainter( 
+  
+  $('#splash_animate').removeClass().addClass('splash-head animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $(this).removeClass().addClass('splash-head');
+      $('#splash_animate2').removeClass().addClass('splash-subhead animated fadeInDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+          $(this).removeClass().addClass('splash-subhead');
+          if(firstScroll){
+            $('.fa.fa-arrow-down.arrow').removeClass().addClass('.hidden');
+          }
+          else{
+            $('.fa.fa-arrow-down.arrow').removeClass().addClass('fa fa-arrow-down arrow animated infinite pulse');
+          }
+        });
+    });
+
+  $('#Untitleddrawing-1').lazylinepainter( 
   {
     "svgData": pathObj,
     "strokeWidth": 2,
     "strokeColor": "#e09b99"
   }).lazylinepainter('paint');
-  $('#splash_animate').removeClass().addClass('splash-head animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      $(this).removeClass().addClass('splash-head');
-      $('#splash_animate2').removeClass().addClass('splash-subhead animated fadeInDown').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-          $(this).removeClass().addClass('splash-subhead');
-          $('.fa.fa-arrow-down.arrow').removeClass().addClass('fa fa-arrow-down arrow animated infinite pulse');
-        });
-    });
 });
 
 /* 
@@ -160,100 +167,52 @@ $(document).ready(function() {
  */ 
  
 var pathObj = {
-    "Untitleddrawing-3": {
+    "Untitleddrawing-1": {
         "strokepath": [
             {
-                "path": "m0 0l609.0 0l0 361.0l-609.0 0l0 -361.0z",
+                "path": "m0 0l396.0 0l0 223.0l-396.0 0l0 -223.0z",
                 "duration": 600
             },
             {
-                "path": "m0 0l609.8819 0l0 361.41208l-609.8819 0z",
+                "path": "m-0.30708662 20.948301l397.48032 0.25196838",
                 "duration": 600
             },
             {
-                "path": "m25.412073 27.293962l556.2205 0l0 313.4173l-556.2205 0z",
+                "path": "m7.756972 11.372094l0 0c0 -2.5048513 2.4818234 -4.5354333 5.543307 -4.5354333l0 0c3.0614843 0 5.5433073 2.030582 5.5433073 4.5354333l0 0c0 2.5048504 -2.481823 4.535433 -5.5433073 4.535433l0 0c-3.0614834 0 -5.543307 -2.0305824 -5.543307 -4.535433z",
                 "duration": 600
             },
             {
-                "path": "m25.412073 27.293962l556.2205 0l0 313.4173l-556.2205 0z",
+                "path": "m24.89333 11.372094l0 0c0 -2.5048513 2.4818249 -4.5354333 5.5433083 -4.5354333l0 0c3.0614853 0 5.5433083 2.030582 5.5433083 4.5354333l0 0c0 2.5048504 -2.481823 4.535433 -5.5433083 4.535433l0 0c-3.0614834 0 -5.5433083 -2.0305824 -5.5433083 -4.535433z",
                 "duration": 600
             },
             {
-                "path": "m25.412073 56.939632l557.6378 0",
+                "path": "m42.02969 11.372094l0 0c0 -2.5048513 2.481823 -4.5354333 5.5433044 -4.5354333l0 0c3.0614853 0 5.5433083 2.030582 5.5433083 4.5354333l0 0c0 2.5048504 -2.481823 4.535433 -5.5433083 4.535433l0 0c-3.0614815 0 -5.5433044 -2.0305824 -5.5433044 -4.535433z",
                 "duration": 600
             },
             {
-                "path": "m25.412073 56.939632l557.6378 0",
+                "path": "m32.621933 51.18994l222.77165 -1.3543282",
                 "duration": 600
             },
             {
-                "path": "m36.706036 43.52231l0 0c0 -3.5050507 3.4759636 -6.3464546 7.7637825 -6.3464546l0 0c4.287815 0 7.7637787 2.841404 7.7637787 6.3464546l0 0c0 3.5050545 -3.4759636 6.3464584 -7.7637787 6.3464584l0 0c-4.287819 0 -7.7637825 -2.841404 -7.7637825 -6.3464584z",
+                "path": "m32.621933 79.75056l168.34645 -1.0078735",
                 "duration": 600
             },
             {
-                "path": "m36.706036 43.52231l0 0c0 -3.5050507 3.4759636 -6.3464546 7.7637825 -6.3464546l0 0c4.287815 0 7.7637787 2.841404 7.7637787 6.3464546l0 0c0 3.5050545 -3.4759636 6.3464584 -7.7637787 6.3464584l0 0c-4.287819 0 -7.7637825 -2.841404 -7.7637825 -6.3464584z",
+                "path": "m32.621933 108.31117l237.88976 -1.0078735",
                 "duration": 600
             },
             {
-                "path": "m60.706036 43.52231l0 0c0 -3.5050507 3.4759636 -6.3464546 7.7637825 -6.3464546l0 0c4.287819 0 7.7637787 2.841404 7.7637787 6.3464546l0 0c0 3.5050545 -3.4759598 6.3464584 -7.7637787 6.3464584l0 0c-4.287819 0 -7.7637825 -2.841404 -7.7637825 -6.3464584z",
+                "path": "m32.621933 136.87178l274.17322 -0.3464508",
                 "duration": 600
             },
             {
-                "path": "m60.706036 43.52231l0 0c0 -3.5050507 3.4759636 -6.3464546 7.7637825 -6.3464546l0 0c4.287819 0 7.7637787 2.841404 7.7637787 6.3464546l0 0c0 3.5050545 -3.4759598 6.3464584 -7.7637787 6.3464584l0 0c-4.287819 0 -7.7637825 -2.841404 -7.7637825 -6.3464584z",
-                "duration": 600
+                "path": "m32.621933 165.43239l273.16534 0.34646606",
+                "duration": 100
             },
-            {
-                "path": "m84.70604 43.52231l0 0c0 -3.5050507 3.4759598 -6.3464546 7.7637787 -6.3464546l0 0c4.287819 0 7.7637787 2.841404 7.7637787 6.3464546l0 0c0 3.5050545 -3.4759598 6.3464584 -7.7637787 6.3464584l0 0c-4.287819 0 -7.7637787 -2.841404 -7.7637787 -6.3464584z",
-                "duration": 600
-            },
-            {
-                "path": "m84.70604 43.52231l0 0c0 -3.5050507 3.4759598 -6.3464546 7.7637787 -6.3464546l0 0c4.287819 0 7.7637787 2.841404 7.7637787 6.3464546l0 0c0 3.5050545 -3.4759598 6.3464584 -7.7637787 6.3464584l0 0c-4.287819 0 -7.7637787 -2.841404 -7.7637787 -6.3464584z",
-                "duration": 600
-            },
-            {
-                "path": "m71.53018 99.29396l312.0 -1.8897629",
-                "duration": 600
-            },
-            {
-                "path": "m71.53018 99.29396l312.0 -1.8897629",
-                "duration": 600
-            },
-            {
-                "path": "m71.53018 139.29396l235.77954 -1.4173126",
-                "duration": 600
-            },
-            {
-                "path": "m71.53018 139.29396l235.77954 -1.4173126",
-                "duration": 600
-            },
-            {
-                "path": "m71.53018 179.29396l333.16534 -1.4173126",
-                "duration": 600
-            },
-            {
-                "path": "m71.53018 179.29396l333.16534 -1.4173126",
-                "duration": 600
-            },
-            {
-                "path": "m71.53018 219.29396l384.0 -0.47244263",
-                "duration": 600
-            },
-            {
-                "path": "m71.53018 219.29396l384.0 -0.47244263",
-                "duration": 600
-            },
-            {
-                "path": "m71.53018 259.29398l382.58267 0.47244263",
-                "duration": 600
-            },
-            {
-                "path": "m71.53018 259.29398l382.58267 0.47244263",
-                "duration": 600
-            }
         ],
         "dimensions": {
-            "width": 609,
-            "height": 361
+            "width": 396,
+            "height": 223
         }
     }
 }; 
