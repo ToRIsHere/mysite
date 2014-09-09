@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>Awesome Resume</title>
+  <title>Everything is Awesome</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
@@ -10,7 +10,26 @@
   <link rel="stylesheet" href="../static/css/animate.css">
   <script src="../static/js/vendor/jquery/jquery.js"></script>
   <script src="../static/js/top.js"></script>
-
+  <style>
+    #map_canvas {
+      width: 750px;
+      height: 400px;
+      background-color: #CCC;
+    }
+  </style>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    function initialize() {
+      var mapCanvas = document.getElementById('map_canvas');
+      var mapOptions = {
+        center: new google.maps.LatLng(20.905680, 123.415551),
+        zoom: 3,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
 </head>
 <body>
     <br>
@@ -19,18 +38,29 @@
     <div class="flex-container">
       <div class="resume-circular-img" style="background: url('../static/img/me1.jpg') no-repeat;"></div>
     </div>
+    <!-- ABOUT ME-->
     <div class="flex-container">
-
       <div class="float-center card-container">
         <div class="card-noborder">
-          <h1>Good day</h1>
+          <h1 class="center-text">ABOUT</h1>
           <blockquote><p>My name is Kittikorn Ariyasuk. But you can call me Tor (Not to be confused with norwegian god). Born in Thailand, now working in Japan. A well-rounded mobile game developer experience in both front and back-end programming.
   I can convert alcohol into code with no promise on number of bugs :)</p></blockquote>
         </div>
       </div>
-
+      <hr>
     </div>
+    <!-- My Location -->
     <div class="flex-container">
+      <div class="float-center card-container">
+        <div class="card-noborder">
+          <div class="flex-container">
+            <h1 class="center-text">MY LOCATION</h1>
+            <div id="map_canvas"></div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
       <div class="leftColumn">
         <div id="left-card-1" class="float-right card-container-2">
           <div class="card">
@@ -40,21 +70,19 @@
             </div>
             <p>All standard HTML structures, styled with CSS.</p>
           </div>
-        </div
-      </div>
-    </div>
-    <div class="rightColumn">
-      <div id="right-card-1" class="float-left card-container-2">
-        <div class="card">
-          <div class="card-image image1">
-            <div class="banner"></div>
-            <h2>Image, Banner, & HTML</h2>
-          </div>
-          <p>All standard HTML structures, styled with CSS.</p>
         </div>
-      </div
-    </div>
-  </div>
+      </div>
+      <div class="rightColumn">
+        <div id="right-card-1" class="float-left card-container-2">
+          <div class="card">
+            <div class="card-image image1">
+              <div class="banner"></div>
+              <h2>Image, Banner, & HTML</h2>
+            </div>
+            <p>All standard HTML structures, styled with CSS.</p>
+          </div>
+        </div>
+      </div>
 
       <div class="float-center card-container">
         <p>My passion:</p>
