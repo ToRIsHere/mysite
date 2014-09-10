@@ -51,14 +51,15 @@ label {
 .l-box-lrg hr{
     width: 50%;
     padding: 0.2em;
+    border: none;
     border-bottom: 1px solid white !important;
 }
 
-.is-center {
+.is-center{
     text-align: center;
+    vertical-align: text-middle;
+    float:center;
 }
-
-
 
 /*
  * -- PURE FORM STYLES --
@@ -96,7 +97,27 @@ a.pure-button-primary {
     font-size: 120%;
 }
 
+a.button-transparent-ribbon {
+  min-width: 200px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: rgba(1,1,1,0);
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+  text-decoration: none;
+}
 
+a.button-transparent {
+  min-width: 200px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: rgba(1,1,1,0);
+  color: red;
+  border-radius: 5px;
+  border: 1px solid red;
+  text-decoration: none;
+}
 /*
  * -- MENU STYLES --
  * I want to customize how my .pure-menu looks at the top of the page
@@ -316,22 +337,58 @@ a.pure-button-primary {
   visibility: hidden;
 }
 
-blockquote {
-
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
+blockquote{
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #666;
+  text-align: justify;
 }
 
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px;
 }
 
-blockquote p {
-  display: inline;
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+blockquote a{
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c;
+}
+
+blockquote a:hover{
+ color: #666;
+}
+
+blockquote em{
+  font-style: italic;
+}
+
+i {
+  padding: 10px;
+}
+
+.fa:hover{
+  color: #8a0707;
 }
