@@ -17,5 +17,9 @@ def resume():
 def profile():
     return render_template('profile.html')
 
+@app.route('/lovelive')
+def lovelive():
+    return render_template('lovelive.html')
+
 if __name__ == '__main__':
     app.run()
