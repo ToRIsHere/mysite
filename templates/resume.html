@@ -89,6 +89,17 @@
           <div class="card-noborder">
             <h1 class="center-text">MY LOCATION</h1>
             <p class="center-text">Kittikorn come from Bangkok, Thaland. Now working in Tokyo, Japan.</p>
+            <style>
+              .overlay {
+                 background:transparent; 
+                 position:relative; 
+                 width:640px;
+                 height:480px; /* your iframe height */
+                 top:480px;  /* your iframe height */
+                 margin-top:-480px;  /* your iframe height */
+              }
+            </style>
+            <div class="overlay" onClick="style.pointerEvents='none'"></div>
             <div class="flex-container">
               <iframe width="600" height="450" scrolling="no" frameborder="0" style="border:0"
 src="https://www.google.com/maps/embed/v1/directions?origin=bangkok&destination=Tokyo&key=AIzaSyDKBB4VWewZoKjUpW0nNjBL6K7iLvOOmy4"></iframe>
