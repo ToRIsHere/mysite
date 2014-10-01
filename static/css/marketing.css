@@ -129,7 +129,7 @@ a.button-transparent {
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
 .home-menu.pure-menu-open {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 1);
 }
 .pure-menu.pure-menu-open.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
@@ -232,9 +232,16 @@ a.button-transparent {
     margin: 2em 0 1em;
 }
 
+.content-header {
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin: auto;
+}
+
 /* This is a modifier class used when the content-head is inside a ribbon */
 .content-head-ribbon {
     text-align: center;
+    letter-spacing: 0.1em;
     color: white;
 }
 
